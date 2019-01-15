@@ -58,41 +58,61 @@
         <form action="http://www.example.com/cg/register" method="post">
             <div>
                 <label for="title">Title</label>
-                <input name="title" id="titleBox" type="text">
+                <input name="title" id="titleBox" type="text" list="titleList">
+                <datalist id="titleList">
+                    <option value="Mr.">
+                    <option value="Mrs.">
+                    <option value="Ms.">
+                    <option value="Prof.">
+                    <option value="Dr.">
+                    <option value="Assist. Prof.">
+                    <option value="Assoc. Prof.">
+                </datalist>
             </div>
             <div>
-                <label for="fName">First Name*</label>
-                <input type="text">
+                <label for="firstName">First Name*</label>
+                <input name="firstName" id="fnBox" type="text" required>
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label for="lastName">Last Name*</label>
+                <input name="lastName" id="lnBox" type="text" required>
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label for="address">Address*</label>
+                <input name="address" id="addBox" type="text" required>
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label for="group">Company or University</label>
+                <input name="group" id="groupBox" type="text">
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label for="email">E-mail*</label>
+                <input name="email" id="mailBox" type="email" required>
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label for="phoneNumber">Phone Number*</label>
+                <input name="phoneNumber" id="phoneBox" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+                    required>
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label for="acgipID">ACGIP Membership Number</label>
+                <input name="acgipID" id="idBox" type="text" placeholder="acgip-nnnnnn" pattern="^acgip\-\d{6}$">
             </div>
             <div>
-                <label for=""></label>
-                <input type="text">
+                <label for="registerType">Registration Category</label>
+                <select name="registerType" id="regList">
+                    <option value="member">ACGIP Member ($695)</option>
+                    <option value="nonmember">Non-Member ($795)</option>
+                    <option value="student">Student ($310)</option>
+                    <option value="poster">Poster ($95)</option>
+                    <option value="guest">Guest ($35)</option>
+                </select>
             </div>
+            <p>
+                <input type="submit" value="continue">
+            </p>
         </form>
+
     </section>
 
     <aside>
