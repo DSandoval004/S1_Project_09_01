@@ -20,7 +20,7 @@
     <title>CGIP Registration Form</title>
     <link href="cg_base.css" rel="stylesheet" />
     <link href="cg_styles.css" rel="stylesheet" />
-    <!-- Linked style sheets, and put script at the bottom. -->
+    <!-- Linked style sheets, and put the link to javaScript at the bottom before the last body tag. -->
     <link rel="stylesheet" href="cg_forms.css">
     <link rel="stylesheet" href="cg_validate.css">
 
@@ -55,8 +55,13 @@
     <section>
         <h1>Conference Registration Form</h1>
         <p>Required Item (*)</p>
+
+        <!-- * Web Form -->
+        <!-- Set up a web form, and made it send the information througn post to http://www.example.com/cg/register -->
         <form action="http://www.example.com/cg/register" method="post">
+            <!-- Book said theat we don't need to encolse the labels and inputs in a div, but I did it anyways. -->
             <div>
+                <!-- An input box to enter the title of the customer and gives a list of possible list. -->
                 <label for="title">Title</label>
                 <input name="title" id="titleBox" type="text" list="titleList">
                 <datalist id="titleList">
@@ -70,35 +75,43 @@
                 </datalist>
             </div>
             <div>
+                <!-- Input box for user to enter their first name, this box is marked required so user have to put information in it. -->
                 <label for="firstName">First Name*</label>
                 <input name="firstName" id="fnBox" type="text" required>
             </div>
             <div>
+                <!-- Input box for user to enter their last name, this box is marked required so user have to put information in it. -->
                 <label for="lastName">Last Name*</label>
                 <input name="lastName" id="lnBox" type="text" required>
             </div>
             <div>
+                <!-- Input box for user to enter their address, this box is marked required so user have to put information in it. -->
                 <label for="address">Address*</label>
                 <input name="address" id="addBox" type="text" required>
             </div>
             <div>
+                <!-- Input box for user to enter what company or university they are associated with -->
                 <label for="group">Company or University</label>
                 <input name="group" id="groupBox" type="text">
             </div>
             <div>
+                <!-- Input box to put user E-Mail in, this box is marked required so user have to put  information in it. -->
                 <label for="email">E-mail*</label>
                 <input name="email" id="mailBox" type="email" required>
             </div>
             <div>
+                <!-- Input box for user to put their phone number in, it also has a patter so it checks to make sure the user phone number is in the correct form, this box is marked required so user have to put information in it. -->
                 <label for="phoneNumber">Phone Number*</label>
                 <input name="phoneNumber" id="phoneBox" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
                     required>
             </div>
             <div>
+                <!-- An input box for the user to put their ACGIP membership number, their is a pattern on it so it checks to make sure the user enters the correct information in the correct form. -->
                 <label for="acgipID">ACGIP Membership Number</label>
                 <input name="acgipID" id="idBox" type="text" placeholder="acgip-nnnnnn" pattern="^acgip\-\d{6}$">
             </div>
             <div>
+                <!-- A select list for user to select what type of membership they want/can get. -->
                 <label for="registerType">Registration Category</label>
                 <select name="registerType" id="regList">
                     <option value="member">ACGIP Member ($695)</option>
@@ -109,9 +122,12 @@
                 </select>
             </div>
             <p>
+                <!-- The Submit button -->
                 <input type="submit" value="continue">
             </p>
         </form>
+
+        <!-- * -->
 
     </section>
 

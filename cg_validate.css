@@ -13,12 +13,14 @@
 
 
 /* Validation Styles */
+/* This changes the background color when the input, select or textarea is in use. */
 input:focus,
 select:focus,
 textarea:focus {
     background-color: rgb(245, 245, 140);
 }
 
+/* This shows if the information is vaild. */
 input#fnBox:focus:valid,
 input#inBox:focus:valid,
 input#addBox:focus:valid,
@@ -28,6 +30,7 @@ input#idBox:focus:valid {
     background: rgb(220, 255, 220) url(cg_valid.png) bottom right/contain no-repeat;
 }
 
+/* This shows if the information is invaild. */
 input#fnBox:focus:invalid,
 input#inBox:focus:invalid,
 input#addBox:focus:invalid,
